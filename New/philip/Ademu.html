@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Philip Ademu | Professional Model & Videographer</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <style>
+      :root {
+        --accent: #d4af37; /* Gold */
+      }
+
+      body {
+        background-color: #050505;
+        color: #ffffff;
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      .serif {
+        font-family: "Playfair Display", serif;
+      }
+
+      .text-accent {
+        color: var(--accent);
+      }
+      .bg-accent {
+        background-color: var(--accent);
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        aspect-ratio: 4/5;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
+
+      .nav-link {
+        position: relative;
+        transition: color 0.3s;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -4px;
+        left: 0;
+        background-color: var(--accent);
+        transition: width 0.3s;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      /* Glassmorphism for header */
+      header {
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .custom-cursor {
+        width: 20px;
+        height: 20px;
+        border: 1px solid var(--accent);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.1s ease;
+        display: none;
+      }
+
+      /* Form Input Styling */
+      .form-input {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: white;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 0px;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-input:focus {
+        outline: none;
+        border-color: var(--accent);
+      }
+
+      @media (min-width: 1024px) {
+        .custom-cursor {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <div class="custom-cursor" id="cursor"></div>
+
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 border-b border-white/10">
+      <div
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-xl font-bold tracking-tighter uppercase"
+          >Philip Ademu</a
+        >
+        <nav
+          class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium"
+        >
+          <a href="#about" class="nav-link">About</a>
+          <a href="#gallery" class="nav-link">Portfolio</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <a
+          href="#contact"
+          class="hidden md:block bg-white text-black px-5 py-2 text-xs font-bold uppercase tracking-tighter rounded-full hover:bg-accent hover:text-white transition-colors"
+        >
+          Book Now
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="h-screen flex items-center justify-center relative overflow-hidden pt-20"
+    >
+      <div class="absolute inset-0 opacity-40">
+        <div
+          class="w-full h-full bg-gradient-to-b from-transparent to-black"
+        ></div>
+      </div>
+
+      <div class="relative z-10 text-center px-4" data-aos="fade-up">
+        <span
+          class="text-accent uppercase tracking-[0.5em] text-xs mb-4 block font-bold"
+          >New York | London | Milan</span
+        >
+        <h1 class="text-6xl md:text-9xl mb-6 tracking-tight">
+          The Modern <br /><span class="italic">Visionary</span>
+        </h1>
+        <p
+          class="max-w-lg mx-auto text-gray-400 text-lg font-light leading-relaxed mb-8"
+        >
+          Blending the art of high-fashion modeling with the technical precision
+          of professional cinematography.
+        </p>
+        <div class="flex justify-center gap-4">
+          <a
+            href="#gallery"
+            class="bg-accent text-black px-8 py-4 rounded-full font-bold uppercase text-xs tracking-widest hover:scale-105 transition-transform"
+            >View Work</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-zinc-950">
+      <div
+        class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center"
+      >
+        <div data-aos="fade-right">
+          <h2 class="text-4xl mb-6">Redefining <br />the Lens</h2>
+          <p class="text-gray-400 leading-loose mb-6">
+            With over 5 years of experience in the industry, Philip Ademu has
+            transitioned seamlessly between being in front of the camera and
+            behind it. This unique perspective allows for a collaborative
+            process that yields stunning, narrative-driven results.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <h4 class="text-accent font-bold text-xl">Model</h4>
+              <p class="text-sm text-zinc-500">Editorial, Runway, Commercial</p>
+            </div>
+            <div>
+              <h4 class="text-accent font-bold text-xl">Director</h4>
+              <p class="text-sm text-zinc-500">Music Videos, Brand Films</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative" data-aos="fade-left">
+          <div class="aspect-[3/4] bg-zinc-900 rounded-lg overflow-hidden">
+            <img
+              src="./Philip_3.jpeg"
+              alt="About Philip"
+              class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              onerror="this.src='https://via.placeholder.com/600x800/1a1a1a/ffffff?text=Philip+Ademu'"
+            />
+          </div>
+          <div
+            class="absolute -bottom-6 -right-6 w-32 h-32 border border-accent/30 hidden md:block"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="gallery" class="py-24 px-6 bg-black">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-12"
+          data-aos="fade-up"
+        >
+          <div>
+            <span
+              class="text-accent uppercase tracking-widest text-xs font-bold"
+              >Selected Works</span
+            >
+            <h2 class="text-5xl mt-2">Portfolio</h2>
+          </div>
+          <div
+            class="mt-4 md:mt-0 flex gap-4 text-xs font-bold uppercase tracking-widest text-zinc-500"
+          >
+            <button class="hover:text-white transition-colors">All</button>
+            <button class="hover:text-white transition-colors">Modeling</button>
+            <button class="hover:text-white transition-colors">Video</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Item 1 -->
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+            <img src="./Philip_2.jpeg" alt="Editorial" />
+            <div class="absolute inset-0 bg-black/60 opacity-0 hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+              <p class="text-accent font-bold uppercase text-xs tracking-tighter mb-1">Editorial</p>
+              <h3 class="text-xl font-bold">Urban Noir Series</h3>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+            <img src="./philip_3.jpeg" alt="Commercial" />
+            <div class="absolute inset-0 bg-black/60 opacity-0 hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+              <p class="text-accent font-bold uppercase text-xs tracking-tighter mb-1">Commercial</p>
+              <h3 class="text-xl font-bold">Vogue Italia Features</h3>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+            <img src="./philip_4.jpeg" alt="Cinematography" />
+            <div class="absolute inset-0 bg-black/60 opacity-0 hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+              <p class="text-accent font-bold uppercase text-xs tracking-tighter mb-1">Cinematography</p>
+              <h3 class="text-xl font-bold">The Golden Hour Short</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-zinc-950 border-t border-white/5">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl md:text-7xl mb-6" data-aos="zoom-out">
+            Let's Create <br /><span class="text-accent italic">Together</span>
+          </h2>
+          <p class="text-zinc-500 uppercase tracking-widest text-xs">Direct Inquiry: ademupillp2020@gmail.com</p>
+        </div>
+
+        <div class="grid md:grid-cols-5 gap-12">
+          <!-- Info Column -->
+          <div class="md:col-span-2 space-y-12" data-aos="fade-right">
+            <div>
+              <p class="text-xs uppercase tracking-widest text-zinc-500 mb-2">Representation</p>
+              <p class="text-lg font-light">Elite Model Management<br>Global Network</p>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-widest text-zinc-500 mb-2">Social Platforms</p>
+              <div class="flex flex-col space-y-2 text-sm font-bold uppercase tracking-widest">
+                <a href="https://www.instagram.com/iam_phili?igsh=MW15MTRjYWM3Z3NrdQ==" class="hover:text-accent transition-colors w-fit">Instagram</a>
+                <a href="https://www.tiktok.com/@iam_phil3" class="hover:text-accent transition-colors w-fit">TikTok</a>
+                <a href="https://x.com/phillp_ademu" class="hover:text-accent transition-colors w-fit">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Column -->
+          <div class="md:col-span-3" data-aos="fade-left">
+            <form action="https://formsubmit.co/ademupillp2020@gmail.com" method="POST" class="space-y-6">
+              <!-- FormSubmit Options -->
+              <input type="hidden" name="_subject" value="New Portfolio Inquiry!">
+              <input type="hidden" name="_template" value="table">
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="text-[10px] uppercase tracking-widest text-zinc-500 mb-2 block">Name</label>
+                  <input type="text" name="name" class="form-input" placeholder="Full Name" required>
+                </div>
+                <div>
+                  <label class="text-[10px] uppercase tracking-widest text-zinc-500 mb-2 block">Email</label>
+                  <input type="email" name="email" class="form-input" placeholder="email@address.com" required>
+                </div>
+              </div>
+              
+              <div>
+                <label class="text-[10px] uppercase tracking-widest text-zinc-500 mb-2 block">Message</label>
+                <textarea name="message" rows="5" class="form-input resize-none" placeholder="Project details or collaboration ideas..." required></textarea>
+              </div>
+
+              <button type="submit" class="w-full bg-white text-black py-4 font-bold uppercase text-xs tracking-[0.2em] hover:bg-accent hover:text-white transition-all">
+                Send Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/5 text-center bg-black">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-zinc-600 text-xs uppercase tracking-widest"
+      >
+        <p>© 2026 Philip Ademu. All Rights Reserved.</p>
+        <div class="mt-4 md:mt-0 space-x-6">
+          <a href="#" class="hover:text-white">Privacy Policy</a>
+          <a href="#" class="hover:text-white">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        once: true,
+        easing: "ease-out-quad",
+      });
+
+      // Custom Cursor Logic
+      const cursor = document.getElementById("cursor");
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+
+      document.addEventListener(
+        "mousedown",
+        () => (cursor.style.transform = "scale(0.8)"),
+      );
+      document.addEventListener(
+        "mouseup",
+        () => (cursor.style.transform = "scale(1)"),
+      );
+
+      // Hover effect for links
+      const interactiveElements = document.querySelectorAll("a, button, input, textarea");
+      interactiveElements.forEach((el) => {
+        el.addEventListener("mouseenter", () => {
+          cursor.style.transform = "scale(1.5)";
+          cursor.style.backgroundColor = "rgba(212, 175, 55, 0.1)";
+        });
+        el.addEventListener("mouseleave", () => {
+          cursor.style.transform = "scale(1)";
+          cursor.style.backgroundColor = "transparent";
+        });
+      });
+
+      // Simple smooth scroll fallback
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
